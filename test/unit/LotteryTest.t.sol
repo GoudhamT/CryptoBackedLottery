@@ -13,7 +13,6 @@ contract LotteryTest is Test {
         vm.startBroadcast();
         backedLottery = new CryptoBackedLottery();
         vm.stopBroadcast();
-        vm.startBroadcast();
     }
 
     function testAmount() public {
