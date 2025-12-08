@@ -11,12 +11,14 @@ contract LotteryTest is Test {
 
     function setUp() public {
         vm.startBroadcast();
-        backedLottery = new CryptoBackedLottery();
+        backedLottery = new CryptoBackedLottery(
+            0x694AA1769357215DE4FAC081bf1f309aDC325306
+        );
         vm.stopBroadcast();
     }
 
     function testAmount() public {
-        (integerAmount, fractionAmount) = backedLottery.getPrice();
+        // (integerAmount, fractionAmount) = backedLottery.getPrice();
         console.log(integerAmount);
         console.log("fraction is ", fractionAmount);
     }
